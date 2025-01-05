@@ -1,7 +1,7 @@
 :root {
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
-  --main-font: "IBM Plex Mono";
+  --main-font: "IBM Plex Mono", Arial, sans-serif;
   --regular-font-weight: 400;
   --bold-font-weight: 700;
   --font-size: 18px;
