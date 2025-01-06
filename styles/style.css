@@ -12,6 +12,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  overflow-x: hidden;
 }
 
 .header {
@@ -133,11 +134,7 @@
   max-inline-size: 355px;
   width: 100%;
   height: min-content;
-  font-weight: var(--bold-font-weight, 700);
   color: var(--accent-text-color, #000028);
-  line-height: 1.3em;
-  margin-block-end: 10px;
-  background-color: var(--bg-decoration, #ff0070);
 }
 
 .main {
@@ -164,20 +161,24 @@
 
 .subtitle {
   font-size: inherit;
+}
+
+.text-decor {
   font-weight: var(--bold-font-weight, 700);
   margin-block-end: 10px;
   line-height: 1.3em;
   background-color: var(--bg-decoration, #ff0070);
 }
 
-.main-subtitle {
-  margin-block-end: 20px;
+.card:nth-of-type(2) {
+  margin-block-start: 10px;
 }
 
 .card-text {
   color: var(--main-text-color, #f1b2ce);
   line-height: 1.3em;
   margin-block-end: 20px;
+  margin-bottom: 30px;
 }
 
 .main p:last-child {
@@ -186,6 +187,7 @@
 
 .main-subtitle-think {
   font-weight: var(--regular-font-weight, 400);
+  margin-block-start: 10px;
 }
 
 .text-link {
@@ -216,7 +218,7 @@
 }
 
 .section-image {
-  width: 100%;
+  width: 99%;
 }
 
 .image-item {
@@ -375,13 +377,16 @@
 
   .section-articles {
     display: flex;
-    justify-content: space-between;
-    column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
   }
 
   .attention {
-    max-width: 315px;
+    max-width: calc(33.33% - 20px);
     width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 20px;
   }
 
   .card-title-section {
